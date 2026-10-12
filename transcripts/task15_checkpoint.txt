@@ -1,0 +1,19 @@
+=== (a) RUN 1: 'output_guard' se pehle rokna ===
+    >>> EXECUTING node 'input_guard' (execution #1)
+    >>> EXECUTING node 'rag_node' (execution #1)
+
+=== (b) EXECUTION STOPPED ===
+Next node waiting : ('output_guard',)
+Saved in checkpoint: masked_query = How many days do I have to return a beauty product? | top_similarity = 0.837
+Execution counts  : {'input_guard': 1, 'rag_node': 1}
+
+=== (c) RESUME: nayi connection + naya graph object, SAME thread_id ===
+Loaded from checkpoints.sqlite -> next node: ('output_guard',)
+Loaded state has masked_query: How many days do I have to return a beauty product?
+    >>> EXECUTING node 'output_guard' (execution #1)
+    >>> EXECUTING node 'finalize' (execution #1)
+
+Final answer: According to our policy: Beauty products can be returned within 7 days of delivery, and only if the seal is unbroken. Ap ...
+Counts before resume: {'input_guard': 1, 'rag_node': 1}
+Counts after resume : {'input_guard': 1, 'rag_node': 1, 'output_guard': 1, 'finalize': 1}
+PASSED: input_guard aur rag_node dobara execute NAHI hue (unka result checkpoint se load hua); sirf output_guard aur finalize resume ke baad chale.

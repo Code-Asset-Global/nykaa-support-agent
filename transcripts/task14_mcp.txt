@@ -1,0 +1,13 @@
+Tools on server: ['check_order_status']
+
+--- call_tool(check_order_status, record_id=NYK-001) ---
+MCP content: {"found":true,"record_id":"NYK-001","status":"Returned","order_value_inr":2528,"escalation_score":0.3867,"escalation_recommended":true}
+structured: {'found': True, 'record_id': 'NYK-001', 'status': 'Returned', 'order_value_inr': 2528, 'escalation_score': 0.3867, 'escalation_recommended': True}
+
+--- call_tool(check_order_status, record_id=NYK-010) ---
+MCP content: {"found":true,"record_id":"NYK-010","status":"Placed","order_value_inr":2870,"escalation_score":0.0667,"escalation_recommended":false}
+structured: {'found': True, 'record_id': 'NYK-010', 'status': 'Placed', 'order_value_inr': 2870, 'escalation_score': 0.0667, 'escalation_recommended': False}
+
+--- call_tool(check_order_status, record_id=NYK-999) ---
+MCP content: {"found":false,"record_id":"NYK-999","error":"Order not found"}
+structured: {'found': False, 'record_id': 'NYK-999', 'error': 'Order not found'}

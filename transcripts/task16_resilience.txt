@@ -1,0 +1,20 @@
+Retry policy : max_attempts=4, initial_interval=0.2s, backoff_factor=2.0, max_interval=1.0s, jitter=True
+Per-node timeout (slow_step): 1.0s | Global timeout: 5.0s
+
+=== (a) Retry recovers (fails first 2 calls, 3rd succeeds) ===
+    flaky_lookup: call #1 -> TransientError (simulated)
+    flaky_lookup: call #2 -> TransientError (simulated)
+    flaky_lookup: call #3 -> SUCCESS
+  RESULT: completed -> ['receive', 'flaky_lookup(succeeded on call 3)', 'enrich', 'slow_step', 'respond'] | order status: Delivered
+  elapsed: 1.90s
+
+=== (b) Per-node timeout (slow_step simulates a 3s call) ===
+    flaky_lookup: call #1 -> SUCCESS
+  RESULT: clean per-node timeout error -> node 'slow_step' exceeded its 1.0s timeout
+  elapsed: 1.00s
+
+=== (c) Global timeout (enrich simulates an 8s overrun) ===
+    flaky_lookup: call #1 -> SUCCESS
+    enrich: CANCELLED by the global timeout
+  RESULT: GLOBAL timeout after 5.0s -> whole run cancelled
+  elapsed: 5.00s
