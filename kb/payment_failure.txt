@@ -1,0 +1,1 @@
+If a payment fails but the money is deducted, the amount is automatically reversed within 5 to 7 working days. Customers can retry payment up to 3 times for the same order within 30 minutes. After that, the order is cancelled automatically and the cart is restored. Switching to another payment method, such as UPI or a different card, often resolves repeated failures.

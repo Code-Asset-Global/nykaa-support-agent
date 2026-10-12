@@ -1,0 +1,1 @@
+For Cash on Delivery orders, refunds cannot go back to a card because no online payment was made. The customer must share bank account details or choose wallet credit instead. Bank refunds are processed within 5 to 7 working days after the returned item passes the quality check. Wallet credit is added within 24 hours of the quality check.
