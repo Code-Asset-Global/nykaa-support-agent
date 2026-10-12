@@ -10,7 +10,7 @@ FALLBACK = "I don't know based on the available policy documents."
 
 
 def load_threshold(collection):
-    with open("threshold.json") as 
+    with open("threshold.json") as f:
         return json.load(f)[collection]
 
 

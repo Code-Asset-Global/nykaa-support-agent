@@ -1,0 +1,10 @@
+Formula: escalation_score = 0.6*delayed_shipment + 0.4*(days_since_created/30)
+Score min/max in dataset: 0.0 1.0
+50th percentile of scores: 0.247
+80th percentile of scores: 0.376
+90th percentile of scores: 0.740
+Chosen threshold (80th percentile) = 0.376
+Orders at/above threshold: 10 of 50
+NYK-001 -> {'found': True, 'record_id': 'NYK-001', 'status': 'Returned', 'order_value_inr': 2528, 'escalation_score': 0.3867, 'escalation_recommended': True}
+NYK-010 -> {'found': True, 'record_id': 'NYK-010', 'status': 'Placed', 'order_value_inr': 2870, 'escalation_score': 0.0667, 'escalation_recommended': False}
+NYK-999 -> {'found': False, 'record_id': 'NYK-999', 'error': 'Order not found'}

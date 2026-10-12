@@ -1,0 +1,14 @@
+Total documents: 12
+return_window            sentences=4  ok=True
+cod_refund               sentences=4  ok=True
+delivery_sla             sentences=4  ok=True
+reverse_pickup           sentences=4  ok=True
+warranty_terms           sentences=4  ok=True
+order_cancellation       sentences=4  ok=True
+loyalty_points           sentences=4  ok=True
+payment_failure          sentences=4  ok=True
+size_exchange            sentences=4  ok=True
+damaged_item_claim       sentences=4  ok=True
+international_shipping   sentences=4  ok=True
+escalation_matrix        sentences=4  ok=True
+Files written to kb/

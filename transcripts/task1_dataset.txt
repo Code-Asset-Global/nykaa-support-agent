@@ -1,0 +1,6 @@
+Total records: 50
+Seed used: 42
+Count per category: {'Footwear': 10, 'Beauty': 12, 'Apparel': 12, 'Electronics': 8, 'Home': 8}
+Count per status: {'Returned': 7, 'Shipped': 10, 'Delivered': 20, 'Placed': 8, 'Refunded': 5}
+delayed_shipment True: 14.0%
+Sample: {'record_id': 'NYK-001', 'category': 'Footwear', 'status': 'Returned', 'order_value_inr': 2528, 'days_since_created': 29, 'delayed_shipment': False}

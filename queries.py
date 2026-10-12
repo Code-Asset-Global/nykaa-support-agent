@@ -1,6 +1,6 @@
 """queries.py - Task 4 aur Task 5 ke queries (calibration alag, demo alag)."""
 
-# Threshold tay karne ke liye
+
 CALIB_IN_SCOPE = [
     "What is the return period for lipstick?",
     "How long does a bank refund take for cash on delivery?",
@@ -16,7 +16,7 @@ CALIB_OUT_OF_SCOPE = [
     "Explain how a car engine works.",
 ]
 
-# Demo (Task 4) aur Precision/Recall (Task 5): (query, sahi doc_ids)
+
 DEMO_QUERIES = [
     ("How many days do I have to return a beauty product?", ["return_window"]),
     ("When will I get my refund for a COD order?", ["cod_refund"]),
