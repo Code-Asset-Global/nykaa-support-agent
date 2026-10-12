@@ -18,19 +18,19 @@ nohup: ignoring input
 ╰──────────────────────────────────────────────────────────────────────────────╯
 
 
-[10/12/26 20:49:56] INFO     Starting MCP server 'Nykaa Order   transport.py:358
+[10/12/26 21:05:29] INFO     Starting MCP server 'Nykaa Order   transport.py:358
                              Tools' with transport 'http' on                    
                              http://127.0.0.1:8000/mcp                          
-INFO:     Started server process [21768]
+INFO:     Started server process [29434]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
-INFO:     127.0.0.1:38418 - "POST /mcp HTTP/1.1" 200 OK
-INFO:     127.0.0.1:38418 - "POST /mcp HTTP/1.1" 200 OK
-INFO:     127.0.0.1:38418 - "POST /mcp HTTP/1.1" 200 OK
-INFO:     127.0.0.1:38418 - "POST /mcp HTTP/1.1" 200 OK
-INFO:     127.0.0.1:38418 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38532 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38532 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38532 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38532 - "POST /mcp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38532 - "POST /mcp HTTP/1.1" 200 OK
 INFO:     Shutting down
 INFO:     Waiting for application shutdown.
 INFO:     Application shutdown complete.
-INFO:     Finished server process [21768]
+INFO:     Finished server process [29434]

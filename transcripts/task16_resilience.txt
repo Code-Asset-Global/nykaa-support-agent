@@ -6,7 +6,7 @@ Per-node timeout (slow_step): 1.0s | Global timeout: 5.0s
     flaky_lookup: call #2 -> TransientError (simulated)
     flaky_lookup: call #3 -> SUCCESS
   RESULT: completed -> ['receive', 'flaky_lookup(succeeded on call 3)', 'enrich', 'slow_step', 'respond'] | order status: Delivered
-  elapsed: 1.90s
+  elapsed: 2.06s
 
 === (b) Per-node timeout (slow_step simulates a 3s call) ===
     flaky_lookup: call #1 -> SUCCESS
