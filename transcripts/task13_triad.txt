@@ -1,4 +1,4 @@
-Collection: kb_sentence | MOCK_LLM: True
+Collection: kb_fixed | MOCK_LLM: True
 
 --- Judge prompt template ---
 You are an impartial judge for a customer-support RAG system.
@@ -13,25 +13,25 @@ Reply as: {{"context_relevance": x, "groundedness": y, "answer_relevance": z}}
 
 --- Per-query scores ---
  # topic                  route   CtxRel  Ground  AnsRel  query
- 1 return window          rag      0.551     1.0   0.671  How many days do I have to return a lipstick after delivery?
- 2 COD refund             rag      0.616     1.0   0.696  When will I get my money back for a cash on delivery return?
- 3 delivery SLA           rag      0.779     1.0   0.837  How many days does standard delivery take in metro cities?
- 4 reverse pickup         rag      0.492     1.0   0.557  Will the courier come to my home to collect a return?
- 5 warranty               rag      0.574     1.0   0.727  How long is the warranty on electronics I bought?
- 6 cancellation           rag      0.787     1.0   0.819  Can I cancel my order after it has shipped?
- 7 loyalty points         rag      0.592     1.0   0.714  How many loyalty points are needed to redeem?
- 8 payment failure        rag      0.585     1.0   0.663  My payment failed but money was deducted, what happens?
- 9 size exchange          rag      0.362     1.0   0.417  Can I swap my sneakers for a bigger size?
-10 damaged item           rag      0.602     1.0    0.69  My parcel arrived broken, how soon must I report it?
-11 international shipping rag      0.494     1.0    0.67  Can I ship perfume sprays to the USA?
-12 escalation matrix      rag       0.47     1.0   0.593  Who handles my complaint if the first support agent does not reply within a day?
-13 EDGE CASE              rag      0.534     1.0   0.593  Can I return a perfume after 20 days?
-14 OUT OF SCOPE           rag      0.144     1.0   0.079  Who won the IPL in 2023?
+ 1 return window          rag      0.469     1.0   0.535  How many days do I have to return a lipstick after delivery?
+ 2 COD refund             rag      0.576     1.0   0.667  When will I get my money back for a cash on delivery return?
+ 3 delivery SLA           rag      0.739     1.0   0.788  How many days does standard delivery take in metro cities?
+ 4 reverse pickup         rag      0.557     1.0   0.597  Will the courier come to my home to collect a return?
+ 5 warranty               rag      0.506     1.0   0.664  How long is the warranty on electronics I bought?
+ 6 cancellation           rag      0.666     1.0   0.662  Can I cancel my order after it has shipped?
+ 7 loyalty points         rag       0.65     1.0   0.709  How many loyalty points are needed to redeem?
+ 8 payment failure        rag      0.534     1.0   0.557  My payment failed but money was deducted, what happens?
+ 9 size exchange          rag      0.334     1.0   0.444  Can I swap my sneakers for a bigger size?
+10 damaged item           rag      0.606     1.0   0.756  My parcel arrived broken, how soon must I report it?
+11 international shipping rag      0.486     1.0   0.577  Can I ship perfume sprays to the USA?
+12 escalation matrix      rag      0.509     1.0    0.57  Who handles my complaint if the first support agent does not reply within a day?
+13 EDGE CASE              rag      0.454     1.0   0.502  Can I return a perfume after 20 days?
+14 OUT OF SCOPE           rag      0.123     1.0   0.079  Who won the IPL in 2023?
      -> agent refused: I don't know based on the available policy documents.
-15 OUT OF SCOPE           rag      0.076     1.0     0.0  Can you recommend a good movie to watch tonight?
+15 OUT OF SCOPE           rag       0.07     1.0     0.0  Can you recommend a good movie to watch tonight?
      -> agent refused: I don't know based on the available policy documents.
 
 --- Averages over 15 queries ---
-mean context_relevance  = 0.511
+mean context_relevance  = 0.485
 mean groundedness       = 1.000
-mean answer_relevance   = 0.582
+mean answer_relevance   = 0.540

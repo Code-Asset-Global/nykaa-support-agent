@@ -4,7 +4,7 @@ import json
 from rag import retrieve
 from queries import DEMO_QUERIES, OUT_OF_SCOPE_DEMO
 
-COLLECTION = "kb_sentence"   # Task 5 ke baad jo behtar nikle, usse badal dena
+COLLECTION = "kb_fixed"   # Task 5 ke baad jo behtar nikle, usse badal dena
 MOCK_LLM = os.getenv("MOCK_LLM", "1") == "1"
 FALLBACK = "I don't know based on the available policy documents."
 

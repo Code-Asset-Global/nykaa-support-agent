@@ -2,28 +2,28 @@
 {'status': 'ok'}
 
 === POST /ask (policy question) ===
-200 rag | trace_id: 91d8cf33eab1474d8f88b20fc6ee1eb6
-answer: According to our policy: Beauty products can be returned within 7 days of delivery, and only if the seal is unbroken. Apparel and Footwear can be returned within 15 days if the tags are attached and the item is unworn.
+200 rag | trace_id: 6c615018c25a4520a270c7810f4c48cd
+answer: According to our policy: Nykaa accepts returns within a fixed window that depends on the product category. Beauty products can be returned within 7 days of delivery, and only if the seal is unbroken. Apparel and Footwear can be seal is unbroken. Apparel and Footwear can be returned within 15 days if the tags are attached and the item is unworn. Electronics and Home items have a 10-day return window and need the original
 
 === POST /ask (PII wala query) ===
 200 order_tool | masked_query: My phone is [PHONE_MASKED] and card ending [CARD_LAST4_MASKED], where is my order NYK-020?
 
 === POST /add-document ===
-200 {'trace_id': '3ea7bcf180184b71adc606890c2aed6d', 'doc_id': 'gift_wrap', 'chunks_added': {'kb_fixed': 1, 'kb_sentence': 3}}
+200 {'trace_id': '35132eb8896e436fab41ee4a843c2c4e', 'doc_id': 'gift_wrap', 'chunks_added': {'kb_fixed': 1, 'kb_sentence': 3}}
 
 === POST /ask (nayi document par sawaal) ===
-200 rag | sources: ['gift_wrap']
-answer: According to our policy: Gift wrap can be added at checkout before payment. Nykaa offers gift wrapping for 50 rupees per item.
+200 rag | sources: ['gift_wrap', 'reverse_pickup']
+answer: According to our policy: Nykaa offers gift wrapping for 50 rupees per item. Gift wrap can be added at checkout before payment. Wrapped items can still be returned within the normal return window. item at a partner courier center and upload the receipt.
 
 === POST /ask (invalid body -> 422) ===
-422 {'trace_id': 'b5eabd765fbf44dd8d041b85d9b712e8', 'detail': 'Invalid request body'}
+422 {'trace_id': 'd36f67d6319745c98c99e859311e4de6', 'detail': 'Invalid request body'}
 
 === logs/requests.jsonl (har request = ek line) ===
-{"timestamp": "2026-10-12T20:59:53.235911+00:00", "trace_id": "91d8cf33eab1474d8f88b20fc6ee1eb6", "endpoint": "/ask", "status": "ok", "conversation_id": "api1", "query": "How many days do I have to return a beauty product?", "route": "rag", "grounded": true, "pii_masked": [], "injection_detected": false, "latency_ms": 3696.55}
-{"timestamp": "2026-10-12T20:59:53.250377+00:00", "trace_id": "99516fb6c4394df4a1e718be87e65e5e", "endpoint": "/ask", "status": "ok", "conversation_id": "api1", "query": "My phone is [PHONE_MASKED] and card ending [CARD_LAST4_MASKED], where is my order NYK-020?", "route": "order_tool", "grounded": true, "pii_masked": ["phone", "card_last4"], "injection_detected": false, "latency_ms": 10.36}
-{"timestamp": "2026-10-12T20:59:53.382191+00:00", "trace_id": "3ea7bcf180184b71adc606890c2aed6d", "endpoint": "/add-document", "status": "ok", "doc_id": "gift_wrap", "text_length": 170, "chunks_added": {"kb_fixed": 1, "kb_sentence": 3}, "latency_ms": 128.27}
-{"timestamp": "2026-10-12T20:59:53.423604+00:00", "trace_id": "efd3ce6c629d4299899f259c89ed8288", "endpoint": "/ask", "status": "ok", "conversation_id": "api2", "query": "How much does gift wrapping cost?", "route": "rag", "grounded": true, "pii_masked": [], "injection_detected": false, "latency_ms": 37.61}
-{"timestamp": "2026-10-12T20:59:53.427779+00:00", "trace_id": "b5eabd765fbf44dd8d041b85d9b712e8", "endpoint": "/ask", "status": "validation_error", "latency_ms": 0}
+{"timestamp": "2026-10-13T16:56:58.982895+00:00", "trace_id": "6c615018c25a4520a270c7810f4c48cd", "endpoint": "/ask", "status": "ok", "conversation_id": "api1", "query": "How many days do I have to return a beauty product?", "route": "rag", "grounded": true, "pii_masked": [], "injection_detected": false, "latency_ms": 3665.41}
+{"timestamp": "2026-10-13T16:56:58.993357+00:00", "trace_id": "609d33a6100b4a80afadd02339783cab", "endpoint": "/ask", "status": "ok", "conversation_id": "api1", "query": "My phone is [PHONE_MASKED] and card ending [CARD_LAST4_MASKED], where is my order NYK-020?", "route": "order_tool", "grounded": true, "pii_masked": ["phone", "card_last4"], "injection_detected": false, "latency_ms": 6.99}
+{"timestamp": "2026-10-13T16:56:59.110282+00:00", "trace_id": "35132eb8896e436fab41ee4a843c2c4e", "endpoint": "/add-document", "status": "ok", "doc_id": "gift_wrap", "text_length": 170, "chunks_added": {"kb_fixed": 1, "kb_sentence": 3}, "latency_ms": 113.73}
+{"timestamp": "2026-10-13T16:56:59.139888+00:00", "trace_id": "0d46fed121c649d3a460540a389f2883", "endpoint": "/ask", "status": "ok", "conversation_id": "api2", "query": "How much does gift wrapping cost?", "route": "rag", "grounded": true, "pii_masked": [], "injection_detected": false, "latency_ms": 26.42}
+{"timestamp": "2026-10-13T16:56:59.142834+00:00", "trace_id": "d36f67d6319745c98c99e859311e4de6", "endpoint": "/ask", "status": "validation_error", "latency_ms": 0}
 
 PII check: raw phone number aur raw card digits log mein nahi hain -> PASSED
 Total log lines: 5

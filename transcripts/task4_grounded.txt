@@ -1,0 +1,25 @@
+Collection: kb_fixed | MOCK_LLM: True
+
+Q: How many days do I have to return a beauty product?
+  grounded=True top_sim=0.6619 thr=0.308 sources=['return_window', 'size_exchange']
+  A: According to our policy: Nykaa accepts returns within a fixed window that depends on the product category. Beauty products can be returned within 7 days of delivery, and only if the seal is unbroken. Apparel and Footwear can be seal is unbroken. Apparel and Footwear can be returned within 15 days if the tags are attached and the item is unworn. Electronics and Home items have a 10-day return window and need the original Size exchange is available for Apparel and Footwear once per order item within 15 days of delivery. The replacement size is shipped only after the original item is picked up and passes the quality check,
+
+Q: When will I get my refund for a COD order?
+  grounded=True top_sim=0.7337 thr=0.308 sources=['cod_refund', 'order_cancellation']
+  A: According to our policy: delivery or request a return after receiving it. Prepaid cancellations are refunded to the original payment method within 5 to 7 working days. Cancelling more than 3 COD orders in a month may lead to COD orders in a month may lead to COD being disabled on the account. For Cash on Delivery orders, refunds cannot go back to a card because no online payment was made. The customer must share bank account details or choose wallet credit instead. Bank refunds are processed within
+
+Q: Can I exchange shoes for a different size?
+  grounded=True top_sim=0.6394 thr=0.308 sources=['size_exchange']
+  A: According to our policy: Size exchange is available for Apparel and Footwear once per order item within 15 days of delivery. The replacement size is shipped only after the original item is picked up and passes the quality check, is picked up and passes the quality check, unless the customer pays a refundable deposit. If the requested size is out of stock, a refund or wallet credit is offered instead. Exchanges are not available credit is offered instead. Exchanges are not available for innerwear or items marked as final sale.
+
+Q: What should I do if the item I received is damaged?
+  grounded=True top_sim=0.5575 thr=0.308 sources=['damaged_item_claim', 'reverse_pickup']
+  A: According to our policy: If an item arrives damaged or incorrect, the customer must report it within 48 hours of delivery. They need to share clear photos of the item and the outer packaging, plus an unboxing video for item at a partner courier center and upload the receipt. the outer packaging, plus an unboxing video for orders above 5000 rupees. After verification, which takes up to 2 working days, a replacement or a full refund is issued. Reverse pickup for damaged items is
+
+Q: Who do I contact if my shipment is delayed by more than a week?
+  grounded=True top_sim=0.5841 thr=0.308 sources=['damaged_item_claim', 'delivery_sla', 'reverse_pickup']
+  A: According to our policy: select cities within 24 hours of dispatch for an extra fee. An order is marked as delayed when it crosses the promised delivery date by more than 2 days. If an item arrives damaged or incorrect, the customer must report it within 48 hours of delivery. They need to share clear photos of the item and the outer packaging, plus an unboxing video for item at a partner courier center and upload the receipt.
+
+Q (out-of-scope): What is the best way to learn guitar?
+  grounded=False top_sim=0.095 thr=0.308
+  A: I don't know based on the available policy documents.

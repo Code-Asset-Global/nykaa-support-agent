@@ -4,7 +4,7 @@
 
 === (b) EXECUTION STOPPED ===
 Next node waiting : ('output_guard',)
-Saved in checkpoint: masked_query = How many days do I have to return a beauty product? | top_similarity = 0.837
+Saved in checkpoint: masked_query = How many days do I have to return a beauty product? | top_similarity = 0.6619
 Execution counts  : {'input_guard': 1, 'rag_node': 1}
 
 === (c) RESUME: nayi connection + naya graph object, SAME thread_id ===
@@ -13,7 +13,7 @@ Loaded state has masked_query: How many days do I have to return a beauty produc
     >>> EXECUTING node 'output_guard' (execution #1)
     >>> EXECUTING node 'finalize' (execution #1)
 
-Final answer: According to our policy: Beauty products can be returned within 7 days of delivery, and only if the seal is unbroken. Ap ...
+Final answer: According to our policy: Nykaa accepts returns within a fixed window that depends on the product category. Beauty produc ...
 Counts before resume: {'input_guard': 1, 'rag_node': 1}
 Counts after resume : {'input_guard': 1, 'rag_node': 1, 'output_guard': 1, 'finalize': 1}
 PASSED: input_guard aur rag_node dobara execute NAHI hue (unka result checkpoint se load hua); sirf output_guard aur finalize resume ke baad chale.

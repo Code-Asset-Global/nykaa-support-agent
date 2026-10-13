@@ -4,7 +4,7 @@
   user (original) : How many days do I have to return a beauty product?
   masked query    : How many days do I have to return a beauty product?
   route           : rag
-  answer          : According to our policy: Beauty products can be returned within 7 days of delivery, and only if the seal is unbroken. Apparel and Footwear can be returned within 15 days if the tags are attached and the item is unworn.
+  answer          : According to our policy: Nykaa accepts returns within a fixed window that depends on the product category. Beauty products can be returned within 7 days of delivery, and only if the seal is unbroken. Apparel and Footwear can be seal is unbroken. Apparel and Footwear can be returned within 15 days if the tags are attached and the item is unworn. Electronics and Home items have a 10-day return window and need the original
   grounded=True sources=['return_window'] guardrails={'pii_masked': [], 'injection_detected': False, 'groundedness_refused': False}
   schema validation: PASSED
 
@@ -38,7 +38,7 @@
   user (original) : What is the return window for beauty products?
   masked query    : What is the return window for beauty products?
   route           : rag
-  answer          : According to our policy: Beauty products can be returned within 7 days of delivery, and only if the seal is unbroken. Nykaa accepts returns within a fixed window that depends on the product category.
+  answer          : According to our policy: Nykaa accepts returns within a fixed window that depends on the product category. Beauty products can be returned within 7 days of delivery, and only if the seal is unbroken. Apparel and Footwear can be a 10-day return window and need the original packaging.
   grounded=True sources=['return_window'] guardrails={'pii_masked': [], 'injection_detected': False, 'groundedness_refused': False}
   schema validation: PASSED
   memory file history length for conv_A: 3 | last_order_id: NYK-010
